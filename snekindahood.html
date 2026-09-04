@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnekIndaHood | $SNEKHOOD</title>
+    <meta name="description" content="SnekIndaHood ($SNEKHOOD) — The danger noodle that left the swamp and moved into the Hood. Pure culture on Robinhood Chain.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#18F2B2">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
+        
+        :root {
+            --green: #18F2B2;
+            --dark-green: #0a8f6a;
+            --bg: #0a0a0a;
+            --card: #151515;
+            --text: #ffffff;
+            --muted: #a0a0a0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0.96)), url('images/background-2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-top: 1rem;
+            border: 1px solid rgba(24, 242, 178, 0.15);
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(10, 10, 10, 0.78), rgba(10, 10, 10, 0.9)), url('images/snekhood-background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+        
+        .logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--green);
+            box-shadow: 0 0 40px rgba(24, 242, 178, 0.3);
+            background: linear-gradient(135deg, #0a8f6a, #18F2B2);
+            display: block;
+        }
+        
+        .hero-mascot {
+            display: block;
+            max-width: 320px;
+            width: 100%;
+            margin: 1.5rem auto 0;
+            border-radius: 16px;
+            border: 1px solid rgba(24, 242, 178, 0.25);
+            box-shadow: 0 0 50px rgba(24, 242, 178, 0.15);
+        }
+        
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.3rem;
+        }
+        
+        .ticker {
+            font-size: 1.4rem;
+            color: var(--green);
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--muted);
+            margin-top: 1rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #222;
+        }
+        
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--green);
+        }
+        
+        p {
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        .cta {
+            display: inline-block;
+            background: var(--green);
+            color: #000;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 1rem 0.5rem;
+        }
+        
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(24, 242, 178, 0.4);
+        }
+        
+        .cta.secondary {
+            background: transparent;
+            border: 2px solid var(--green);
+            color: var(--green);
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: color 0.2s;
+        }
+        
+        .links a:hover {
+            color: var(--green);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+        
+        .warning {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .gallery-item {
+            background: var(--card);
+            border-radius: 16px;
+            border: 1px solid #222;
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            border-color: rgba(24, 242, 178, 0.5);
+            box-shadow: 0 8px 30px rgba(24, 242, 178, 0.2);
+        }
+        
+        .gallery-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+        
+        .gallery-item figcaption {
+            padding: 1rem;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+        
+        .gallery-item.wide img {
+            aspect-ratio: 16 / 9;
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .logo { width: 140px; height: 140px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/snekhood_icon.jpg" alt="SnekIndaHood logo — hooded snek with a red feather" class="logo">
+            <h1>SnekIndaHood</h1>
+            <div class="ticker">$SNEKHOOD</div>
+            <p class="tagline">The danger noodle that left the swamp and moved into the Hood.</p>
+            <img src="images/snekhood.jpg" alt="SnekIndaHood mascot — hooded snek holding a money bag" class="hero-mascot" loading="lazy">
+        </header>
+        
+        <div class="card">
+            <h2>About</h2>
+            <p>
+                SnekIndaHood is a pure culture meme token on Robinhood Chain. Inspired by the legendary Snek of Cardano, 
+                this danger noodle put on a hoodie, grabbed a bag, and slithered straight into the streets of the Hood.
+            </p>
+            <p>
+                No VC. No team allocation. No roadmap full of empty promises. Just memes, community, and the timeless art of robbing whales to feed the degens.
+            </p>
+            <p>
+                Launching fair on Pons. Liquidity locked. Culture unlocked.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>The Creed</h2>
+            <p>Take from the whales.</p>
+            <p>Give to the degens.</p>
+            <p>Stay hood. Stay snek.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Da Gallery</h2>
+            <p>Inner monologues of a danger noodle. Classic Snek culture, Hood edition.</p>
+            <div class="gallery">
+                <figure class="gallery-item wide">
+                    <img src="images/snekhood-background.jpg" alt="Snek in a green cloak launching a PONS rocket" loading="lazy">
+                    <figcaption>“wen pons, ser? is doin a launch”</figcaption>
+                </figure>
+                <figure class="gallery-item wide">
+                    <img src="images/background-2.jpg" alt="Snek pointing at a PONS rocket launch pad" loading="lazy">
+                    <figcaption>“i am darkness but also hungry”</figcaption>
+                </figure>
+                <figure class="gallery-item wide">
+                    <img src="images/background-3.jpg" alt="Snek riding a PONS rocket" loading="lazy">
+                    <figcaption>“to da Moon”</figcaption>
+                </figure>
+                
+                <figure class="gallery-item">
+                    <img src="images/snekhood.jpg" alt="Hooded snek holding a money bag" loading="lazy">
+                    <figcaption>“robbin whales. feedin degens. no cap”</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/snekhood_icon.jpg" alt="Smiling hooded snek face in a circle" loading="lazy">
+                    <figcaption>“stay snek. stay hood.”</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="images/snekhood-1.jpg" alt="Hooded snek with $SNEKHOOD logo and money bag" loading="lazy">
+                    <figcaption>“i did a heckin bag secured”</figcaption>
+                </figure>
+                
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 2.5rem 0;">
+            <a href="#" class="cta">Launch on Pons</a>
+            <a href="#" class="cta secondary">Join Telegram</a>
+        </div>
+        
+        <div class="links">
+            <a href="#">𝕏 Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Chart</a>
+            <a href="#">Explorer</a>
+        </div>
+        
+        <footer>
+            <p>SnekIndaHood · $SNEKHOOD · Robinhood Chain</p>
+            <p class="warning">
+                This is a meme token created for entertainment purposes. It has no intrinsic value or expectation of financial return. 
+                Cryptocurrency involves significant risk. DYOR. Not financial advice.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
