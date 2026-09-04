@@ -44,15 +44,16 @@ To run locally, just open the file — no build step:
 
 ```bash
 # from the repo root
-xdg-open snekindahood.html   # or open index.html / snekindahood.html in your browser
+xdg-open index.html   # or open index.html in your browser
 ```
 
 ```
 .
-├── snekindahood.html   # the whole site (HTML + CSS inline)
+├── index.html          # the whole site (HTML + CSS inline)
 ├── images/             # memes: mascots, logo, PONS launch art
 ├── favicon.ico         # favicon set (png/ico/apple-touch/android-chrome)
 ├── site.webmanifest    # PWA manifest
+├── .nojekyll           # serve raw files, skip Jekyll build
 └── description.txt     # lore & taglines
 ```
 
